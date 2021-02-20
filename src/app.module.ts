@@ -1,12 +1,15 @@
+/*
+ * @Author: zhixiong.fu
+ * @Date: 2021-02-21 00:10:15
+ * @Last Modified by: zhixiong.fu
+ * @Last Modified time: 2021-02-21 00:10:37
+ */
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { MobilePhoneController } from './controller/mobile-phone';
-import { MobilePhoneService } from './service/mobile-phone';
+import { MobilePhoneModule } from './modules/mobile-phone';
 
 @Module({
-  imports: [],
-  controllers: [AppController, MobilePhoneController],
-  providers: [AppService, MobilePhoneService],
+  imports: [MobilePhoneModule],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
