@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
 import { AppModule } from './app.module';
+import { setupSwagger } from './swagger/swagger';
 
 async function bootstrap() {
   console.log('====================================');
@@ -8,6 +9,8 @@ async function bootstrap() {
   console.log('====================================');
 
   const app = await NestFactory.create(AppModule);
+
+  setupSwagger(app);
 
   // app.get 可以获取到对应初始化成功的实例!
   const configService = app.get(ConfigService);
