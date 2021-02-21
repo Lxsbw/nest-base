@@ -2,7 +2,7 @@
  * @Author: zhixiong.fu
  * @Date: 2021-02-21 00:50:40
  * @Last Modified by: zhixiong.fu
- * @Last Modified time: 2021-02-21 15:56:51
+ * @Last Modified time: 2021-02-22 01:11:47
  */
 export default {
   listen: {
@@ -20,12 +20,11 @@ export default {
     port: 6606,
     username: 'root',
     password: 'Admin@123',
-    database: 'nestjs_test',
+    database: 'typeorm_init',
     // timezone: 'UTC',
     // charset: 'utf8mb4',
     entities: [__dirname + '/../**/*.entity.{js,ts}'],
-    synchronize: true,
-    logging: true,
-    migrationsTableName: 'Migrations_History'
+    synchronize: false,
+    logging: true
   }
 };
