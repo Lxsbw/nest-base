@@ -2,27 +2,30 @@
  * @Author: zhixiong.fu
  * @Date: 2021-02-20 23:32:15
  * @Last Modified by: zhixiong.fu
- * @Last Modified time: 2021-02-20 23:48:53
+ * @Last Modified time: 2021-02-21 15:48:53
  */
 import { Injectable } from '@nestjs/common';
-import { Cat } from '../interfaces/create-cat.dto';
-
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { MobilePhone } from '../models/mobile-phone.entity';
+import { IFindOneIn } from '../interfaces/mobile-phone';
 @Injectable()
 export class MobilePhoneService {
-  private readonly cats: Cat[] = [];
+  constructor(
+    @InjectRepository(MobilePhone)
+    private readonly mobilePhoneRepository: Repository<MobilePhone>,
+  ) {}
 
-  create(cat: Cat) {
-    this.cats.push(cat);
-  }
-
-  findOne(): Cat {
-    console.log('server');
-    let catObj: Cat = {
-      name: 'lxsbw',
-      age: 18,
-      breed: '1929',
-    };
-
-    return catObj;
+  /**
+   * id查找
+   */
+  async findOne(params: IFindOneIn): Promise<any> {
+    const where: any = {};
+    // 匹配id
+    if (params.id) {
+      where.id = params.id;
+    }
+    const result = await this.mobilePhoneRepository.findOne({ where });
+    return result;
   }
 }
