@@ -5847,7 +5847,7 @@ ts-loader@^8.0.8:
     micromatch "^4.0.0"
     semver "^7.3.4"
 
-ts-node@^9.0.0:
+ts-node@^9.1.1:
   version "9.1.1"
   resolved "https://registry.npm.taobao.org/ts-node/download/ts-node-9.1.1.tgz#51a9a450a3e959401bda5f004a72d54b936d376d"
   integrity sha1-UamkUKPpWUAb2l8ASnLVS5NtN20=
