@@ -2,14 +2,14 @@
  * @Author: zhixiong.fu
  * @Date: 2021-02-21 00:10:15
  * @Last Modified by: zhixiong.fu
- * @Last Modified time: 2021-02-21 15:23:27
+ * @Last Modified time: 2021-02-21 15:53:55
  */
 import { Module } from '@nestjs/common';
-import { MobilePhoneModule } from './modules/mobile-phone';
+import { MobilePhoneModule } from './modules/mobile-phone.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import customConfig from './config';
-import { HomeController } from './controller/Home';
+import { HomeController } from './controller/Home.controller';
 
 @Module({
   imports: [

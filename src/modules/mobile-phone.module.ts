@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { MobilePhoneController } from '../controller/mobile-phone';
-import { MobilePhoneService } from '../service/mobile-phone';
+import { MobilePhoneController } from '../controller/mobile-phone.controller';
+import { MobilePhoneService } from '../service/mobile-phone.service';
 import { MobilePhone } from '../models/mobile-phone.entity';
 @Module({
   imports: [TypeOrmModule.forFeature([MobilePhone])],
