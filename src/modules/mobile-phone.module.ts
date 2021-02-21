@@ -6,6 +6,6 @@ import { MobilePhone } from '../models/mobile-phone.entity';
 @Module({
   imports: [TypeOrmModule.forFeature([MobilePhone])],
   controllers: [MobilePhoneController],
-  providers: [MobilePhoneService],
+  providers: [MobilePhoneService]
 })
 export class MobilePhoneModule {}

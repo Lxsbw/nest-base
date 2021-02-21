@@ -1,14 +1,14 @@
 /*
  * @Author: zhixiong.fu
  * @Date: 2021-02-21 13:47:43
- * @Last Modified by:   zhixiong.fu
- * @Last Modified time: 2021-02-21 13:47:43
+ * @Last Modified by: zhixiong.fu
+ * @Last Modified time: 2021-02-21 15:57:55
  */
 import {
   PrimaryColumn,
   CreateDateColumn,
   UpdateDateColumn,
-  DeleteDateColumn,
+  DeleteDateColumn
 } from 'typeorm';
 
 /**
@@ -20,21 +20,21 @@ export class BaseModel {
   @PrimaryColumn({
     type: 'varchar',
     length: 50,
-    comment: 'id',
+    comment: 'id'
   })
   id: string;
 
   @CreateDateColumn({
     type: 'datetime',
     name: 'created_at',
-    comment: '创建时间',
+    comment: '创建时间'
   })
   createdAt: Date;
 
   @UpdateDateColumn({
     type: 'datetime',
     name: 'updated_at',
-    comment: '更新时间',
+    comment: '更新时间'
   })
   updatedAt: Date;
 
@@ -43,7 +43,7 @@ export class BaseModel {
     type: 'datetime',
     name: 'deleted_at',
     select: false,
-    comment: '删除时间',
+    comment: '删除时间'
   })
   deletedAt: Date;
 }

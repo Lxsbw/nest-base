@@ -2,7 +2,7 @@
  * @Author: zhixiong.fu
  * @Date: 2021-02-20 23:32:15
  * @Last Modified by: zhixiong.fu
- * @Last Modified time: 2021-02-21 15:48:53
+ * @Last Modified time: 2021-02-21 15:57:02
  */
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -13,7 +13,7 @@ import { IFindOneIn } from '../interfaces/mobile-phone';
 export class MobilePhoneService {
   constructor(
     @InjectRepository(MobilePhone)
-    private readonly mobilePhoneRepository: Repository<MobilePhone>,
+    private readonly mobilePhoneRepository: Repository<MobilePhone>
   ) {}
 
   /**

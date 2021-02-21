@@ -2,14 +2,14 @@
  * @Author: zhixiong.fu
  * @Date: 2021-02-21 00:50:40
  * @Last Modified by: zhixiong.fu
- * @Last Modified time: 2021-02-21 15:42:26
+ * @Last Modified time: 2021-02-21 15:56:51
  */
 export default {
   listen: {
     path: '',
     // 端口
     port: parseInt(process.env.PORT, 10) || 3002,
-    hostname: '127.0.0.1',
+    hostname: '127.0.0.1'
   },
   // 是否开启swagger
   enableSwagger: true,
@@ -26,6 +26,6 @@ export default {
     entities: [__dirname + '/../**/*.entity.{js,ts}'],
     synchronize: true,
     logging: true,
-    migrationsTableName: 'Migrations_History',
-  },
+    migrationsTableName: 'Migrations_History'
+  }
 };
