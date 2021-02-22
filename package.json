@@ -1,7 +1,7 @@
 {
   "name": "nest-base",
   "version": "0.0.1",
-  "description": "",
+  "description": "Node.js & NestJS & TypeScript & MVC & TypeORM & swagger",
   "author": "",
   "private": true,
   "license": "UNLICENSED",

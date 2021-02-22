@@ -9,9 +9,9 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 export function setupSwagger(app: INestApplication) {
   const options = new DocumentBuilder()
-    .setTitle('Nestjs TypeScript Swagger')
+    .setTitle('NestJS TypeScript Swagger')
     .setDescription(
-      'This is a sample server Nestjs server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters.'
+      'This is a sample server NestJS server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters.'
     )
     .setVersion('1.0')
     .setContact('zhixiong.fu', 'https://github.com/Lxsbw', 'lxsbw@outlook.com')
