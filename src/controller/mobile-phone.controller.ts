@@ -12,7 +12,9 @@ import {
   Get,
   Post,
   Put,
-  Delete
+  Delete,
+  Request,
+  Response
 } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiParam, ApiQuery } from '@nestjs/swagger';
 import { MobilePhoneService } from '../service/mobile-phone.service';
@@ -50,16 +52,10 @@ export class MobilePhoneController {
     @Query('offset') offset: number,
     @Query('limit') limit: number,
     @Query('id') id: string,
-    @Query('modelName') modelName: string
+    @Query('modelName') modelName: string,
+    @Request() req
   ) {
-    const query = {
-      offset: offset,
-      limit: limit,
-      id: id,
-      modelName: modelName
-    };
-    console.log('query : ' + JSON.stringify(query));
-    const result = await this.mobilePhoneService.findAll(query);
+    const result = await this.mobilePhoneService.findAll(req.query);
     return { success: true, message: 'OK', data: result };
   }
 
@@ -82,6 +78,8 @@ export class MobilePhoneController {
     // requestBody: { description: '手机信息', required: true, content: null }
   })
   async create(@Body() param: ICreateIn) {
+    // console.log('body : ' + JSON.stringify(req.body));
+    // console.log('param : ' + JSON.stringify(param));
     const result = await this.mobilePhoneService.create(param);
     return { success: true, message: 'OK', data: result };
   }
