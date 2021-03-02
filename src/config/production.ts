@@ -2,14 +2,14 @@
  * @Author: zhixiong.fu
  * @Date: 2021-02-21 00:50:40
  * @Last Modified by: zhixiong.fu
- * @Last Modified time: 2021-02-21 01:19:54
+ * @Last Modified time: 2021-02-22 01:11:47
  */
 export default {
   listen: {
     path: '',
     // 端口
-    port: parseInt(process.env.PORT, 10) || 3002,
-    hostname: '127.0.0.1',
+    port: parseInt(process.env.PORT, 10) || 3006,
+    hostname: '127.0.0.1'
   },
   // 是否开启swagger
   enableSwagger: true,
@@ -20,11 +20,11 @@ export default {
     port: 6606,
     username: 'root',
     password: 'Admin@123',
-    database: 'midway_test',
-    timezone: 'UTC',
-    charset: 'utf8mb4',
-    // entities: ['./**/*.entity.js'],
-    // synchronize: true,
-    // logging: true,
-  },
+    database: 'typeorm_init',
+    // timezone: 'UTC',
+    // charset: 'utf8mb4',
+    entities: [__dirname + '/../**/*.entity.{js,ts}'],
+    synchronize: false,
+    logging: true
+  }
 };
