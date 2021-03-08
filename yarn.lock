@@ -4001,6 +4001,11 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
+linqts@^1.14.4:
+  version "1.14.4"
+  resolved "https://registry.npm.taobao.org/linqts/download/linqts-1.14.4.tgz#0aa0f78fc6be073d7db874e0a0480fda5d06db7d"
+  integrity sha1-CqD3j8a+Bz19uHTgoEgP2l0G230=
+
 loader-runner@^4.1.0:
   version "4.2.0"
   resolved "https://registry.npm.taobao.org/loader-runner/download/loader-runner-4.2.0.tgz?cache=0&sync_timestamp=1610027938815&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Floader-runner%2Fdownload%2Floader-runner-4.2.0.tgz#d7022380d66d14c5fb1d496b89864ebcfd478384"
