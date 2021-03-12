@@ -33,6 +33,7 @@
     "biguint-format": "^1.0.2",
     "cross-env": "^7.0.3",
     "flake-idgen": "^1.4.0",
+    "jslinq": "^1.0.22",
     "linqts": "^1.14.4",
     "lodash": "^4.17.21",
     "mysql2": "^2.2.5",

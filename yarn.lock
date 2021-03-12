@@ -3878,6 +3878,11 @@ jsesc@^2.5.1:
   resolved "https://registry.npm.taobao.org/jsesc/download/jsesc-2.5.2.tgz#80564d2e483dacf6e8ef209650a67df3f0c283a4"
   integrity sha1-gFZNLkg9rPbo7yCWUKZ98/DCg6Q=
 
+jslinq@^1.0.22:
+  version "1.0.22"
+  resolved "https://registry.npm.taobao.org/jslinq/download/jslinq-1.0.22.tgz#23f16a09903e9e6419f885b00c8d5373bf3dc759"
+  integrity sha1-I/FqCZA+nmQZ+IWwDI1Tc789x1k=
+
 json-parse-better-errors@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/json-parse-better-errors/download/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"

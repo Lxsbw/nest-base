@@ -2,7 +2,6 @@ import { NestFactory } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
 import { AppModule } from './app.module';
 import { setupSwagger } from './swagger/swagger';
-import * as bodyParser from 'body-parser';
 
 async function bootstrap() {
   console.log('====================================');
@@ -17,8 +16,6 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
   const listen = configService.get('listen');
   // console.log('config listen :' + JSON.stringify(listen));
-
-  app.use(bodyParser.json());
 
   await app.listen(listen.port);
 

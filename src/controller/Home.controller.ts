@@ -6,6 +6,7 @@
  */
 import { Controller, Get } from '@nestjs/common';
 import { List } from 'linqts';
+import * as jslinq from 'jslinq';
 
 @Controller()
 export class HomeController {
@@ -41,7 +42,12 @@ export class HomeController {
       { id: 5, name: 'five', category: 'fruits', countries: ['Japan', 'Italy'] }
     ];
 
-    const result = new List(data).OrderBy((x) => x.id).ThenBy((x) => x.name);
+    const queryObj = jslinq(data);
+    const result = jslinq(data).orderBy((x) => x.id);
+
+    // const result = queryObj.singleOrDefault(function (el) {
+    //   return el.name == 'one';
+    // });
 
     return result;
   }
